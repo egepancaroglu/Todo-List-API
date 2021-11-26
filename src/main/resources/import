@@ -1,0 +1,8 @@
+INSERT INTO todolist (id, name, description)
+VALUES (1, 'market listesi', 'unutma');
+INSERT INTO todolist (id, name, description)
+VALUES (2, 'ödevler', 'ödevleri yap');
+INSERT INTO todolist (id, name, description)
+VALUES (3, 'alışveriş', 'migros');
+
+
