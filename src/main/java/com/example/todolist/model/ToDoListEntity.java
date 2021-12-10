@@ -1,14 +1,20 @@
 package com.example.todolist.model;
 
 
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
-@Data
 @Entity
 @Table(name = "todolist")
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
 public class ToDoListEntity {
 
     @Id
@@ -23,10 +29,15 @@ public class ToDoListEntity {
     private String description;
 
     @Column(name = "endtime")
-    private LocalDate endtime;
+    @Temporal(TemporalType.DATE)
+    private Date endtime;
 
     @Column(name = "isdone")
     private Boolean isdone;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", referencedColumnName = "user", nullable = false)
+    private UserEntity userEntity;
 
 
     /*

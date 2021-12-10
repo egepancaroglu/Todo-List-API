@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 public class UserEntity {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int user_id;

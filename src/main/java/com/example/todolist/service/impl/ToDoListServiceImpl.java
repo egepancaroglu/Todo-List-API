@@ -22,12 +22,10 @@ public class ToDoListServiceImpl implements ToDoListService {
     @Override
     public void add(ToDoListEntity toDoList) {
         this.toDoListRepository.save(toDoList);
-
     }
 
     @Override
     public void update(ToDoListEntity toDoList) {
-
     }
 
     @Override

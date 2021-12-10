@@ -5,6 +5,7 @@ import com.example.todolist.model.UserEntity;
 import java.util.List;
 
 public interface UserService {
+
     void add(UserEntity user);
 
     void update(UserEntity user);
